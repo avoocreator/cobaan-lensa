@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Listening Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style-beranda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="Material/Logo Lensa Matura - Colored.png" alt="Logo" style="height: 60px; width: auto;">
+            Listening<span>Day</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Beranda</a>
+            <button id="logoutBtn" class="btn-logout">Keluar</button>
+        </div>
+    </div>
+</nav>
+
+    <main class="container">
+        <header class="welcome-section">
+            <h2 id="welcomeText">Selamat Datang, Responden</h2>
+            <p>Pilih kategori untuk memberikan rating dan aspirasi Anda.</p>
+        </header>
+
+        <section class="slider-section">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" onclick="goToAspirasi('Fasilitas')">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200" alt="Fasilitas">
+                        <div class="banner-content">
+                            <span class="tag trending">TRENDING 🔥</span>
+                            <h3>Fasilitas Sekolah</h3>
+                            <p>Rating toilet, taman, dan fasilitas lainnya.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="goToAspirasi('Kantin')">
+                        <img src="https://images.unsplash.com/photo-1574966739982-2b7849df3127?q=80&w=1200" alt="Kantin">
+                        <div class="banner-content">
+                            <h3>Kebersihan Kantin</h3>
+                            <p>Suarakan pendapatmu tentang menu dan harga.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="section-title">
+                <h3>Indeks Kepuasan Siswa</h3>
+                <p>Data rata-rata rating dari seluruh responden.</p>
+            </div>
+
+            <div class="category-group">
+                <h4 class="category-label">Kategori: Fasilitas</h4>
+                <div class="charts-grid">
+                    
+                    <div class="chart-card">
+                        <div class="chart-info">
+                            <h4>Kebersihan Toilet</h4>
+                            <span class="avg-score">4.2 <i class="fas fa-star"></i></span>
+                        </div>
+                        
+                        <div class="playstore-rating">
+                            <div class="rating-bar-row">
+                                <span>5</span>
+                                <div class="bar-container"><div class="bar-fill" id="toilet-5"></div></div>
+                            </div>
+                            <div class="rating-bar-row">
+                                <span>4</span>
+                                <div class="bar-container"><div class="bar-fill" id="toilet-4"></div></div>
+                            </div>
+                            <div class="rating-bar-row">
+                                <span>3</span>
+                                <div class="bar-container"><div class="bar-fill" id="toilet-3"></div></div>
+                            </div>
+                            <div class="rating-bar-row">
+                                <span>2</span>
+                                <div class="bar-container"><div class="bar-fill" id="toilet-2"></div></div>
+                            </div>
+                            <div class="rating-bar-row">
+                                <span>1</span>
+                                <div class="bar-container"><div class="bar-fill" id="toilet-1"></div></div>
+                            </div>
+                            <p class="total-voters" id="total-toilet">0 total suara</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-info">
+                            <h4>Kenyamanan Taman</h4>
+                            <span class="avg-score">3.8 <i class="fas fa-star"></i></span>
+                        </div>
+                        
+                        <div class="playstore-rating">
+                            <div class="rating-bar-row">
+                                <span>5</span>
+                                <div class="bar-container"><div class="bar-fill" id="taman-5"></div></div>
+                            </div>
+                            <div class="rating-bar-row">
+                                <span>4</span>
+                                <div class="bar-container"><div class="bar-fill" id="taman-4"></div></div>
+                            </div>
+                            <div class="rating-bar-row">
+                                <span>3</span>
+                                <div class="bar-container"><div class="bar-fill" id="taman-3"></div></div>
+                            </div>
+                            <div class="rating-bar-row">
+                                <span>2</span>
+                                <div class="bar-container"><div class="bar-fill" id="taman-2"></div></div>
+                            </div>
+                            <div class="rating-bar-row">
+                                <span>1</span>
+                                <div class="bar-container"><div class="bar-fill" id="taman-1"></div></div>
+                            </div>
+                            <p class="total-voters" id="total-taman">0 total suara</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script-beranda.js"></script>
+</body>
+</html>
